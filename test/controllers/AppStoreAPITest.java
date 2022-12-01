@@ -1,11 +1,13 @@
 package controllers;
 
 import models.*;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BooleanSupplier;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -245,10 +247,9 @@ public class AppStoreAPITest {
             assertTrue(apps.contains("No recommended apps"));
         }
 
-        @Test //not printing, all -1 WeDo
+        @Test
         void listRecommendedAppsReturnsRecommendedAppsWhenTheyExist() {
             assertEquals(7, appStore.numberOfApps());
-            System.out.println(appStore.listAllApps());
 
             //adding recommended apps to the list
             appStore.addApp(setupGameAppWithRating(5, 4));
@@ -258,14 +259,12 @@ public class AppStoreAPITest {
 
             String apps = appStore.listAllRecommendedApps();
 
-            //checks for the three objects in the string
             assertTrue(apps.contains("MazeRunner"));
             assertTrue(apps.contains("Evernote"));
             assertTrue(apps.contains("WeDo"));
         }
 
         @Test
-            //check
         void ListSummaryOfAllAppsReturnsNoAppsWhenArrayListEmpty() {
             assertEquals(0, emptyAppStore.numberOfApps());
             assertTrue(emptyAppStore.listSummaryOfAllApps().toLowerCase().contains("no apps"));
@@ -275,16 +274,15 @@ public class AppStoreAPITest {
         void ListSummaryOfAllAppsReturnsAppWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
             String apps = appStore.listSummaryOfAllApps();
-            System.out.println(apps);
 
-            //checks for objects in the string
+
+
             assertTrue(apps.contains("WeDo"));
             assertTrue(apps.contains("Outlook"));
             assertTrue(apps.contains("Empires"));
             assertTrue(apps.contains("NoteKeeper"));
             assertTrue(apps.contains("EV3"));
             assertTrue(apps.contains("CookOff"));
-
         }
 
         @Test
@@ -294,12 +292,11 @@ public class AppStoreAPITest {
 
         }
 
-        @Test //printing fine
+        @Test
         void listAllGamesAppsReturnsAppsWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
             String apps = appStore.listAllGameApps();
 
-            //checks for objects in the string
             assertTrue(apps.contains("Empires"));
             assertTrue(apps.contains("CookOff"));
         }
@@ -310,12 +307,11 @@ public class AppStoreAPITest {
             assertTrue(emptyAppStore.listAllEducationApps().toLowerCase().contains("no education apps"));
         }
 
-        @Test //printing fine
+        @Test
         void listAllEducationAppsReturnsAppsWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
             String apps = appStore.listAllEducationApps();
-            System.out.println(apps);
-            //checks for objects in the string
+
             assertTrue(apps.contains("WeDo"));
             assertTrue(apps.contains("EV3"));
         }
@@ -326,12 +322,11 @@ public class AppStoreAPITest {
             assertTrue(emptyAppStore.listAllProductivityApps().toLowerCase().contains("no productivity apps"));
         }
 
-        @Test //printing fine
+        @Test
         void listAllProductivityAppsReturnsAppsWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
             String apps = appStore.listAllProductivityApps();
 
-            //checks for objects in the string
             assertTrue(apps.contains("Outlook"));
             assertTrue(apps.contains("NoteKeeper"));
         }
@@ -350,9 +345,6 @@ public class AppStoreAPITest {
             String apps = appStore.listAllAppsByName("WeDo");
             String apps1 = appStore.listAllAppsByName("Outlook");
             String apps2 = appStore.listAllAppsByName("Empires");
-            System.out.println(apps);
-            System.out.println(apps1);
-            System.out.println(apps2);
 
             assertTrue(apps.contains("WeDo"));
             assertTrue(apps1.contains("Outlook"));
@@ -369,19 +361,20 @@ public class AppStoreAPITest {
         void ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
 
-
             appStore.addApp(setupGameAppWithRating(5, 4));
             appStore.addApp(setupEducationAppWithRating(3, 4));
             appStore.addApp(setupProductivityAppWithRating(3, 4));
             assertEquals(10, appStore.numberOfApps());
-            System.out.println(appStore.numberOfApps());
 
-            String appsWithRating = appStore.listAllAppsAboveOrEqualAGivenStarRating(1);
+
+            String appsWithRating = appStore.listAllAppsAboveOrEqualAGivenStarRating(3);
             System.out.println(appsWithRating);
+
             //checks names of apps
             assertTrue(appsWithRating.contains("MazeRunner"));
             assertTrue(appsWithRating.contains("WeDo"));
             assertTrue(appsWithRating.contains("Evernote"));
+
         }
         @Test
         void ListAllAppsByDeveloperReturnsNoAppsWhenArrayListIsEmpty() {
@@ -483,9 +476,10 @@ public class AppStoreAPITest {
         @Test
         void getAppByNameReturnsAppFoundWhenArrayListHasMatchingName() {
             assertEquals(7, appStore.numberOfApps());
-            System.out.println(appStore.listAllApps());
 
             assertEquals(gameAppOnBoundary,appStore.getAppByName("CookOff"));
+            assertEquals(edAppBelowBoundary,appStore.getAppByName("WeDo"));
+            assertEquals(prodAppBelowBoundary, appStore.getAppByName("NoteKeeper"));
 
         }
     }
@@ -563,7 +557,7 @@ public class AppStoreAPITest {
 
     ProductivityApp setupProductivityAppWithRating(int rating1, int rating2) {
         ProductivityApp productivityApp = new ProductivityApp(developerApple, "Evernote", 1,
-                1.0, 1.99);
+                1.0, 2.99);
 
         productivityApp.addRating(new Rating(rating1, "John101", "So easy to add a note"));
         productivityApp.addRating(new Rating(rating2, "Jane202", "So useful"));

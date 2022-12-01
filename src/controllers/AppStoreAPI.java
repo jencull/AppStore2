@@ -3,7 +3,6 @@ package controllers;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import models.*;
-import utils.*;
 import utils.ISerializer;
 
 import java.io.FileReader;
@@ -12,9 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
-import static java.lang.Math.random;
 import static utils.RatingUtility.generateRandomRating;
 
 public class AppStoreAPI implements ISerializer {
@@ -177,17 +174,15 @@ public class AppStoreAPI implements ISerializer {
      * @return the app if exists, otherwise null
      */
     public App getAppByName(String name) {
-        App app = null;
+
         if (isValidAppName(name)) {
 
-            for (int i = 0; i < apps.size(); i++) {
-                if (apps.get(i).getAppName().toLowerCase().contains(name.toLowerCase())) {
-                    app = apps.get(i);
+            for (App app: apps) {
+                if (app.getAppName().toLowerCase().equalsIgnoreCase(name)) {
+                    return app;
                 }
-                return app; //try for each
             }
-        }
-        return apps.get(1);
+        } return null;
     }
 
     //Reporting methods
@@ -313,7 +308,7 @@ public class AppStoreAPI implements ISerializer {
         String list = "";
 
         for (App app : apps) {
-            if (rating >= app.calculateRating()) {
+            if (app.calculateRating() <= rating) {
                 list += apps.indexOf(app) + ": " + app + "\n";
             }
         }

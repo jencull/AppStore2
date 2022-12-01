@@ -4,32 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2a4abee-8ca9-4549-aa90-f08f1c92240f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xstream_1_4_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AppStore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/xstream-1.4.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/AppStoreAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/DeveloperAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/EducationApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/GameApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/ProductivityApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Rating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ISerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/RatingUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ScannerInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/AppStoreAPITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/EducationAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/GameAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/ProductivityAppTest.java" afterDir="false" />
+    <list default="true" id="c2a4abee-8ca9-4549-aa90-f08f1c92240f" name="Changes" comment="Dec 1st">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AppStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppStoreAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/AppStoreAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/AppStoreAPITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +61,97 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps">
+    <configuration name="AppStoreAPITest$ReportingMethods.ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
+      <option name="METHOD_NAME" value="ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStoreAPITest$ReportingMethods.ListAllAppsByNameReturnsAppsWhenArrayListHasApps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
+      <option name="METHOD_NAME" value="ListAllAppsByNameReturnsAppsWhenArrayListHasApps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStoreAPITest$ReportingMethods.ListSummaryOfAllAppsReturnsAppWhenArrayListHasApps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
+      <option name="METHOD_NAME" value="ListSummaryOfAllAppsReturnsAppWhenArrayListHasApps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStoreAPITest$ReportingMethods.listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
+      <option name="METHOD_NAME" value="listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStoreAPITest$SearchingMethods.getAppByNameReturnsAppFoundWhenArrayListHasMatchingName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$SearchingMethods" />
+      <option name="METHOD_NAME" value="getAppByNameReturnsAppFoundWhenArrayListHasMatchingName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps" />
+        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsByNameReturnsAppsWhenArrayListHasApps" />
+        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListSummaryOfAllAppsReturnsAppWhenArrayListHasApps" />
+        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" />
+        <item itemvalue="JUnit.AppStoreAPITest$SearchingMethods.getAppByNameReturnsAppFoundWhenArrayListHasMatchingName" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,8 +160,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669926427662</updated>
-      <workItem from="1669926429039" duration="1766000" />
+      <workItem from="1669926429039" duration="7337000" />
     </task>
+    <task id="LOCAL-00001" summary="Dec 1st">
+      <created>1669928400758</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669928400758</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +185,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dec 1st" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dec 1st" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AppStore$AppStoreAPITest.ic" NAME="AppStoreAPITest Coverage Results" MODIFIED="1669932334105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AppStore$ProductivityAppTest.ic" NAME="ProductivityAppTest Coverage Results" MODIFIED="1669928690402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AppStore$EducationAppTest.ic" NAME="EducationAppTest Coverage Results" MODIFIED="1669928654745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AppStore$GameAppTest.ic" NAME="GameAppTest Coverage Results" MODIFIED="1669928666661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>models.*</FILTER>
+    </SUITE>
   </component>
 </project>

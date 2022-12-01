@@ -40,12 +40,13 @@ public abstract class App {
 
     @Override
     public String toString () {
-        return developer + " " + appName + " (Version " + appVersion + ") "
-                + appSize + "MB Cost: " + appCost + " ";
+        return appName + " (Version " + appVersion + ") " + getDeveloper().toString()
+                + " " + appSize + "MB Cost: " + appCost + " " + listRatings();
     }
 
+
     public String appSummary () {
-        return developer + " " + appName + " (V" + appVersion + ")"
+        return developer + " " + appName + "(V" + appVersion + ")"
                 + ", €" + appCost + ". Rating: " + calculateRating();
     }
 
