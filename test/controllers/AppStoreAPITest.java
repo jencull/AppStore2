@@ -368,7 +368,7 @@ public class AppStoreAPITest {
 
 
             String appsWithRating = appStore.listAllAppsAboveOrEqualAGivenStarRating(3);
-            System.out.println(appsWithRating);
+            System.out.println("$$$$$" + appsWithRating);
 
             //checks names of apps
             assertTrue(appsWithRating.contains("MazeRunner"));

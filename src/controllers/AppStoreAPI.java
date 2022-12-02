@@ -307,9 +307,9 @@ public class AppStoreAPI implements ISerializer {
     public String listAllAppsAboveOrEqualAGivenStarRating(int rating) {
         String list = "";
 
-        for (App app : apps) {
-            if (app.calculateRating() <= rating) {
-                list += apps.indexOf(app) + ": " + app + "\n";
+         for (int i = 0; i<apps.size(); i++) {
+            if (rating <= apps.get(i).calculateRating()) {
+                list +=  apps.indexOf(i) + ": " + apps.get(i) + "\n";
             }
         }
         if (list.isEmpty()) {
@@ -352,7 +352,7 @@ public class AppStoreAPI implements ISerializer {
 
         for (App app : apps) {
             if (app.getDeveloper().equals(developer)) {
-                list += "\n" + apps.indexOf(app) + ": " + app;
+                list +=  apps.indexOf(app) + ": " + app + "\n";
             }
         }
         if (list.isEmpty()) {
@@ -485,6 +485,7 @@ public class AppStoreAPI implements ISerializer {
     }
 
     public void save() throws Exception {
+
         XStream xstream = new XStream(new DomDriver());
         ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter(fileName()));
         out.writeObject(apps);
