@@ -27,7 +27,6 @@ public class AppStoreAPI implements ISerializer {
 
     /**
      * Method returns the apps in the arrayList
-     *
      * @return object
      */
     public ArrayList<App> getApps() {
@@ -178,7 +177,7 @@ public class AppStoreAPI implements ISerializer {
         if (isValidAppName(name)) {
 
             for (App app: apps) {
-                if (app.getAppName().toLowerCase().equalsIgnoreCase(name)) {
+                if (app.getAppName().toLowerCase().contains(name.toLowerCase())) {
                     return app;
                 }
             }
@@ -294,7 +293,7 @@ public class AppStoreAPI implements ISerializer {
 
         for (App app : apps) {
             if (isValidAppName(name)) {
-                list += apps.indexOf(app) + ": " + app + "\n";
+                list +=  "\n" + apps.indexOf(app) + ": " + app;
             }
         }
         if (list.isEmpty()) {
@@ -307,9 +306,9 @@ public class AppStoreAPI implements ISerializer {
     public String listAllAppsAboveOrEqualAGivenStarRating(int rating) {
         String list = "";
 
-         for (int i = 0; i<apps.size(); i++) {
-            if (rating <= apps.get(i).calculateRating()) {
-                list +=  apps.indexOf(i) + ": " + apps.get(i) + "\n";
+         for (App app : apps) {
+            if (rating <= app.calculateRating()) {
+                list +=  "\n" + apps.indexOf(app) + ": " + app.appSummary();
             }
         }
         if (list.isEmpty()) {
@@ -329,7 +328,7 @@ public class AppStoreAPI implements ISerializer {
 
         for (App app : apps) {
             if (app.isRecommendedApp()) {
-                list += apps.indexOf(app) + ": " + app + "\n";
+                list +=  "\n" +  apps.indexOf(app) + ": " + app;
             }
         }
         if (list.isEmpty()) {
@@ -352,7 +351,7 @@ public class AppStoreAPI implements ISerializer {
 
         for (App app : apps) {
             if (app.getDeveloper().equals(developer)) {
-                list +=  apps.indexOf(app) + ": " + app + "\n";
+                list +=  "\n" + apps.indexOf(app) + ": " + app;
             }
         }
         if (list.isEmpty()) {
@@ -413,7 +412,7 @@ public class AppStoreAPI implements ISerializer {
     }
 
     /**
-     *
+     *Sort apps into ascending alphabetical order. No return.
      */
     public void sortAppsByNameAscending() {
 
@@ -430,6 +429,9 @@ public class AppStoreAPI implements ISerializer {
         }
     }
 
+    /**
+     * utility to generate random ratings for testing purposes
+     */
 
     public void simulateRatings() {
         for (App app : apps) {

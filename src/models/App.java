@@ -40,7 +40,7 @@ public abstract class App {
 
     @Override
     public String toString () {
-        return appName + " (Version " + appVersion + ") " + getDeveloper().toString()
+        return appName + " " + getDeveloper().toString() + " (Version " + appVersion + ") "
                 + " " + appSize + "MB Cost: " + appCost + " " + listRatings();
     }
 
@@ -76,7 +76,7 @@ public abstract class App {
         else {
             String list = "";
             for (int i = 0; i< ratings.size(); i++) {
-                list += "\n" + ratings.get(i);
+                list += "\n \t" + ratings.get(i);
             }
             return list;
         }

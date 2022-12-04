@@ -228,7 +228,7 @@ public class AppStoreAPITest {
         void listAllAppsReturnsAppsStoredWhenArrayListHasAppsStored() {
             assertEquals(7, appStore.numberOfApps());
             String apps = appStore.listAllApps();
-            System.out.println(apps);
+
             //checks for objects in the string
             assertTrue(apps.contains("WeDo"));
             assertTrue(apps.contains("Outlook"));
@@ -340,7 +340,6 @@ public class AppStoreAPITest {
         @Test //not printing out ok, returns no apps for ?
         void ListAllAppsByNameReturnsAppsWhenArrayListHasApps() {
             assertEquals(7, appStore.numberOfApps());
-            System.out.println(appStore.listAllApps());
 
             String apps = appStore.listAllAppsByName("WeDo");
             String apps1 = appStore.listAllAppsByName("Outlook");
@@ -366,9 +365,7 @@ public class AppStoreAPITest {
             appStore.addApp(setupProductivityAppWithRating(3, 4));
             assertEquals(10, appStore.numberOfApps());
 
-
             String appsWithRating = appStore.listAllAppsAboveOrEqualAGivenStarRating(3);
-            System.out.println("$$$$$" + appsWithRating);
 
             //checks names of apps
             assertTrue(appsWithRating.contains("MazeRunner"));
@@ -403,6 +400,8 @@ public class AppStoreAPITest {
 
             String searchApps2 = appStore.listAllAppsByChosenDeveloper(developerMicrosoft);
             assertTrue(searchApps2.contains("www.microsoft.com"));
+
+            System.out.println(searchApps + searchApps1 + searchApps2);
         }
     }
 

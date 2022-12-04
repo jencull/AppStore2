@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2a4abee-8ca9-4549-aa90-f08f1c92240f" name="Changes" comment="Dec 1st 10.30pm">
+    <list default="true" id="c2a4abee-8ca9-4549-aa90-f08f1c92240f" name="Changes" comment="Dec 2nd 10pm">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-files/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-files/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/AppStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppStoreAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DeveloperAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DeveloperAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Developer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/AppStoreAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/AppStoreAPITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +58,13 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/jennefercullinan/Desktop/AppStore&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -60,6 +72,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javadoc" />
+      <recent name="$PROJECT_DIR$/index-files" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -75,6 +89,22 @@
       <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
       <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
       <option name="METHOD_NAME" value="ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppStoreAPITest$ReportingMethods.ListAllAppsByDeveloperReturnsAppsWhenArrayListHasAppsMatching" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
+      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
+      <option name="METHOD_NAME" value="ListAllAppsByDeveloperReturnsAppsWhenArrayListHasAppsMatching" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,22 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppStoreAPITest$ReportingMethods.listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AppStore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers.AppStoreAPITest" />
-      <option name="MAIN_CLASS_NAME" value="controllers.AppStoreAPITest$ReportingMethods" />
-      <option name="METHOD_NAME" value="listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppStoreAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppStore" />
       <extension name="coverage">
@@ -146,10 +160,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppStoreAPITest" />
+        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsByDeveloperReturnsAppsWhenArrayListHasAppsMatching" />
         <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsAboveOrEqualAStarRatingReturnsAppsWhenArrayListHasApps" />
         <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListAllAppsByNameReturnsAppsWhenArrayListHasApps" />
         <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.ListSummaryOfAllAppsReturnsAppWhenArrayListHasApps" />
-        <item itemvalue="JUnit.AppStoreAPITest$ReportingMethods.listRecommendedAppsReturnsRecommendedAppsWhenTheyExist" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +179,10 @@
       <workItem from="1669976165945" duration="501000" />
       <workItem from="1669981112153" duration="920000" />
       <workItem from="1669983302175" duration="2019000" />
-      <workItem from="1670004269739" duration="12095000" />
+      <workItem from="1670004269739" duration="46833000" />
+      <workItem from="1670182124435" duration="555000" />
+      <workItem from="1670184073933" duration="2307000" />
+      <workItem from="1670189011453" duration="4359000" />
     </task>
     <task id="LOCAL-00001" summary="Dec 1st">
       <created>1669928400758</created>
@@ -181,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669933806783</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dec 2nd 10pm">
+      <created>1670018707032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670018707032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +225,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dec 1st" />
     <MESSAGE value="Dec 1st 10.30pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dec 1st 10.30pm" />
+    <MESSAGE value="Dec 2nd 10pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dec 2nd 10pm" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AppStore$AppStoreAPITest.ic" NAME="AppStoreAPITest Coverage Results" MODIFIED="1669984349601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

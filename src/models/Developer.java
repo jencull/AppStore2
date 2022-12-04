@@ -40,7 +40,7 @@ public class Developer {
 
     @Override
     public String toString() {
-        return  developerName + "(" + developerWebsite + ")";
+        return  developerName + " (" + developerWebsite + ")";
     }
 
 }
